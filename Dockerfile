@@ -5,13 +5,13 @@ MAINTAINER Buckaroo Cheung <cheung.buckaroo@gmail.com>
 ENV RACK_ENV production
 ENV MAIN_APP_FILE myapp.rb
 
-RUN mkdir -p /usr/src/myapp
+RUN mkdir -p /myapp
 
 ADD startup.sh /
 
-WORKDIR /usr/src/myapp
+WORKDIR /myapp
 
-EXPOSE 80
+EXPOSE 8080
 
 CMD ["/bin/bash", "/startup.sh"]
 
